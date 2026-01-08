@@ -1,0 +1,229 @@
+<section class="about-urbx">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>How We Work</h2>
+      <p>Planning systems built for institutions, not presentations.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <div class="info-card">
+        <h3>What We Do</h3>
+        <p>
+          URBX is a planning systems company operating at the intersection of
+          urban planning, public policy, and computational design. We convert
+          procedural planning frameworks into scalable software used internally
+          by governments. We do not deliver one-off consultancy outputs. We build
+          long-term planning infrastructure grounded in real regulatory and
+          institutional constraints.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Our Mission</h3>
+        <p>
+          We treat planning as an operational system, not a static document.
+          URBX restructures how planning decisions are made by translating
+          real-world workflows into rule-based, explainable analytical pipelines.
+          Human judgment stays central—manual repetition does not. Transparency,
+          accountability, and policy control are non-negotiable.
+        </p>
+      </div>
+
+      <div class="info-card highlight">
+        <h3>Why URBX</h3>
+        <p>
+          We bridge planning theory and on-ground implementation through
+          people-centric, institution-ready systems that actually work.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+/* ---------- FEATURES ---------- */
+
+
+
+.features {
+    background: rgba(157, 157, 158, 0.944);
+    padding: 4rem 2rem;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-left: 4px solid #000;
+}
+
+.feature-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.products-hero {
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url(/Images/Banner.jpg);
+    animation: fadeUp 1s ease;
+}
+
+.products-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.products-hero p {
+    color: #000;
+    font-size: 18px;
+}
+
+/* FILTERS */
+.filter-section {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #111;
+    padding: 10px 22px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* PRODUCTS */
+.products-section {
+    padding: 60px 6%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 20px 20px 5px;
+    font-size: 20px;
+}
+
+.product-card p {
+    padding: 0 20px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .products-hero h1 {
+        font-size: 32px;
+    }
+}
+<div class="product-card">
+    <img src="images/project4.jpg" alt="Project 4">
+    <div class="overlay">
+      <h2>PRODUCT 4</h2>
+      <p>
+        Showcasing sustainable architecture, green infrastructure,
+        and progressive urban systems across regions.
+      </p>
+    </div>
+  </div>
+
+  .hero h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+/* Contributions */
+.contributions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contributions li {
+  padding-left: 25px;
+  margin-bottom: 12px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.contributions li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #111111;
+}
+.executive-summary span {
+  font-weight: 400;
+  color: #777777;
+}
+/* Abstract Styling */
+.abstract {
+  background-color: #f2f2f2;
+  padding: 25px;
+  border-left: 3px solid #999999;
+}
+
+.abstract p {
+  font-size: 0.95rem;
+  color: #333333;
+}
+ <!-- Abstract -->
+                <div class="pub-section abstract">
+                    <h3>Abstract</h3>
+                    <p>
+                        [Paste the full journal abstract verbatim here. This section is intentionally muted
+                        and visually boxed to reflect academic formality and credibility.]
+                    </p>
+                </div>
+                <div class="pub-meta">
+                    <span>The Repetition Paradox in Urban Planning</span>
+                </div>
+                /* Meta Label */
+.pub-meta span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777777;
+}

@@ -1,0 +1,770 @@
+ /* ---------- GLOBAL ---------- */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Arial", serif;
+ }
+
+ body {
+     background: #fff;
+     color: #000;
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ /* ---------- NAVBAR ---------- */
+ header {
+     background: white;
+     color: black;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+
+ .navbar {
+     width: 100%;
+     margin: auto;
+     padding: 1rem 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     overflow: visible;
+     background-color: white;
+ }
+
+ .logo {
+     display: flex;
+     align-items: center;
+ }
+
+ .logo img {
+     height: 58px;
+     width: auto;
+     transform: scale(1.2);
+     /* visual boost WITHOUT affecting layout */
+     transform-origin: left center;
+ }
+
+ .nav-links {
+     display: flex;
+     gap: 2rem;
+ }
+
+ .nav-links a {
+     color: black;
+     font-size: 1.05rem;
+     position: relative;
+     padding-bottom: 2px;
+     display: inline-block;
+     padding: 5px 0;
+ }
+
+ .nav-links a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -4px;
+     width: 0%;
+     height: 3px;
+     transition: width 0.3s ease-in-out;
+     background-color: black;
+ }
+
+ .nav-links a:hover::after {
+     color: black;
+     width: 100%;
+ }
+
+ /* ---------- HAMBURGER ---------- */
+ .menu-toggle {
+     display: none;
+     font-size: 0.95rem;
+     cursor: pointer;
+ }
+
+ /* ---------- MOBILE MENU ---------- */
+ .mobile-menu {
+     display: none;
+     background: #111;
+     padding: 1.5rem 2rem;
+ }
+
+ .mobile-menu a {
+     display: block;
+     padding: 0.8rem 0;
+     border-bottom: 1px solid #333;
+     color: #ddd;
+ }
+
+ .mobile-menu a:last-child {
+     border-bottom: none;
+ }
+
+ /* ---------- HOME HERO ---------- */
+ .hero {
+     height: 85vh;
+     background: url(/Images/banner2.png);
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: #fff;
+     padding: 2rem;
+ }
+
+ .hero p {
+     margin-top: 4rem;
+     color: #fff;
+     margin-bottom: 2rem;
+     font-size: 1.05rem;
+ }
+
+ .hero button {
+     padding: 0.9rem 2rem;
+     font-size: 1.05rem;
+     border: 2px solid #fff;
+     background: transparent;
+     color: #fff;
+     cursor: pointer;
+ }
+
+ .hero button:hover {
+     background: grey;
+     border: 1px solid grey;
+     color: #000;
+ }
+
+ /* ---------- HOME INTRO ---------- */
+ .intro {
+     max-width: 1400px;
+     margin: auto;
+     padding: 3rem 2rem;
+     text-align: center;
+     background-color: #fff;
+ }
+
+ .intro p {
+     color: black;
+     margin-bottom: 1rem;
+     font-size: 1.05rem;
+     line-height: 1.6;
+     text-align: justify;
+ }
+
+ /* ============================
+   ABOUT URBX – HORIZONTAL
+   ============================ */
+
+ .about-row {
+     padding: 35px 0;
+     border-top: 1px solid #e0e0e0;
+ }
+
+ /* Each horizontal strip */
+ .about-urbx-horizontal {
+     padding: 40px 4%;
+     background-color: #fff;
+ }
+
+ /* Remove first border */
+ .about-row:first-child {
+     border-top: none;
+     padding-top: 0;
+ }
+
+ /* Heading style (matches theme) */
+ .about-row h3 {
+     font-size: 1.7rem;
+     margin-bottom: 12px;
+     margin-left: 1%;
+     color: #111;
+ }
+
+ /* Text */
+ .about-row p {
+     font-size: 1.06rem;
+     line-height: 1.7;
+     margin-left: 1%;
+     color: black;
+     text-align: justify;
+     max-width: 1400px;
+ }
+
+ .features-urbx {
+     background-color: #f2f2f2;
+     padding: 40px 0;
+     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+ }
+
+ .container {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ /* Card Layout */
+ .card-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 30px;
+ }
+
+ /* Cards */
+ .info-card {
+     background: #fff;
+     color: #000;
+     padding: 40px 35px;
+     border-radius: 6px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .info-card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+ }
+
+ .info-card h3 {
+     font-size: 22px;
+     font-weight: 600;
+     margin-bottom: 20px;
+     color: #000;
+ }
+
+ .info-card p {
+     font-size: 15px;
+     line-height: 1.7;
+     color: #333;
+     text-align: justify;
+ }
+
+ /* Highlight card (Why URBX) */
+ .info-card.highlight {
+     background: #000;
+ }
+
+ .info-card.highlight h3,
+ .info-card.highlight p {
+     color: #fff;
+ }
+
+
+ /* ============================
+        SERVICES 
+   ============================ */
+
+ .page-hero {
+     padding: 30px 6% 30px;
+     background-color: #fff;
+     text-align: left;
+ }
+
+ .page-hero h3 {
+     font-size: 1.7rem;
+     margin-bottom: 10px;
+     color: #000;
+ }
+
+ .page-hero p {
+     font-size: 1.06rem;
+     color: #000;
+ }
+
+ /* --- SERVICES VISUAL LAYOUT ---*/
+
+ .services-visual {
+     width: 100%;
+ }
+
+ /* Section layout */
+ .service-section {
+     display: flex;
+     align-items: center;
+     padding: 30px 30px;
+     gap: 50px;
+     margin-left: 3%;
+ }
+
+ /* Reverse row */
+ .service-section.reverse {
+     flex-direction: row-reverse;
+ }
+
+ /* Background colors */
+ .bg-lemon {
+     background-color: white;
+ }
+
+ .bg-white {
+     background-color: white;
+ }
+
+ /* Image */
+ .service-image {
+     flex: 1;
+ }
+
+ .service-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 4px;
+ }
+
+ /* Content */
+ .service-content {
+     flex: 1;
+     color: #000;
+ }
+
+ .service-content h2 {
+     font-size: 2rem;
+     margin-bottom: 12px;
+ }
+
+ .service-content p {
+     font-size: 1.05rem;
+     margin-bottom: 15px;
+     max-width: 520px;
+ }
+
+ .service-content ul {
+     list-style: none;
+     padding-left: 0;
+ }
+
+ .service-content ul li {
+     padding: 6px 0;
+     font-size: 1.02rem;
+ }
+
+ /* --- Section Mobile --- */
+
+ @media (max-width: 900px) {
+
+     .service-section,
+     .service-section.reverse {
+         flex-direction: column;
+         padding: 50px 5%;
+     }
+
+     .service-image img {
+         height: 240px;
+     }
+ }
+
+ /* =================
+     Publications Page 
+     =================  */
+
+ .publications-page {
+     background-color: #ffffff;
+     color: #111111;
+     padding: 80px 10%;
+     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+ }
+
+ /* Header */
+ .pub-header {
+     margin-bottom: 60px;
+ }
+
+ .pub-header h1 {
+     font-size: 2.8rem;
+     font-weight: 700;
+     margin-bottom: 10px;
+ }
+
+ .pub-header .subtitle {
+     font-size: 1.1rem;
+     color: #555555;
+     max-width: 600px;
+ }
+
+ /* Featured Publication Card */
+ .featured-publication {
+     border: 1px solid #767474;
+     padding: 50px;
+     background-color: #fafafa;
+ }
+
+ /* Title */
+ .pub-title {
+     font-size: 2.2rem;
+     font-weight: 700;
+     margin: 15px 0 20px;
+ }
+
+ /* Details */
+ .pub-details {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     font-size: 0.95rem;
+     color: #333333;
+     margin-bottom: 25px;
+ }
+
+ /* Hook */
+ .pub-hook {
+     font-size: 1.2rem;
+     font-style: italic;
+     color: #222222;
+     border-left: 4px solid #111111;
+     padding-left: 20px;
+     margin: 30px 0;
+ }
+
+ /* Sections */
+ .pub-section {
+     margin-top: 40px;
+ }
+
+ .pub-section h2 {
+     font-size: 1.4rem;
+     font-weight: 600;
+     margin-bottom: 15px;
+ }
+
+ .pub-section h4 {
+     font-size: 1.2rem;
+     padding-bottom: 10px;
+ }
+
+ /* Executive Summary */
+
+ .executive-summary p {
+     font-size: 1.05rem;
+     line-height: 1.7;
+     text-align: justify;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+     .publications-page {
+         padding: 60px 6%;
+     }
+
+     .pub-title {
+         font-size: 1.7rem;
+     }
+
+     .pub-header h1 {
+         font-size: 2.2rem;
+     }
+
+     .featured-publication {
+         padding: 30px;
+     }
+
+     .pub-details {
+         flex-direction: column;
+         gap: 8px;
+     }
+ }
+
+ /* =================
+      PRODUCTS PAGE
+    =================  */
+
+ /* BODY */
+ body {
+     font-family: "Helvetica Neue", Arial, sans-serif;
+     background-color: #e5e5e5;
+     color: #000;
+ }
+
+ /* HEADER */
+ .page-header {
+     padding: 30px 60px;
+     margin-bottom: 10px;
+ }
+
+ .page-header h1 {
+     font-size: 48px;
+     letter-spacing: 1.5px;
+     font-weight: 600;
+ }
+
+ /* GRID LAYOUT */
+ .products-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+     gap: 30px;
+     padding: 0 60px 60px;
+ }
+
+ /* CARD */
+ .product-card {
+     position: relative;
+     overflow: hidden;
+     background-color: #000;
+     cursor: pointer;
+ }
+
+ /* IMAGE */
+ .product-card img {
+     width: 100%;
+     height: 500px;
+     overflow: hidden;
+     display: block;
+     filter: grayscale(100%);
+     transition: transform 0.6s ease, filter 0.6s ease;
+ }
+
+ /* OVERLAY */
+ .overlay {
+     position: absolute;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.65);
+     color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: justify;
+     padding: 60px;
+     opacity: 0;
+     transform: translateY(20px);
+     transition: opacity 0.5s ease, transform 0.5s ease;
+ }
+
+ /* TEXT */
+ .overlay h2 {
+     font-size: 28px;
+     letter-spacing: 1px;
+     margin-bottom: 25px;
+ }
+
+ .overlay h4 {
+     font-size: 22px;
+     margin-bottom: 25px;
+ }
+
+ .overlay p {
+     font-size: 18px;
+     line-height: 1.6;
+     color: #d0d0d0;
+ }
+
+ /* HOVER EFFECTS */
+ .product-card:hover img {
+     transform: scale(1.08);
+     filter: grayscale(0%);
+ }
+
+ .product-card:hover .overlay {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+
+
+ /* ============================
+   CONTACT PAGE
+   ============================ */
+
+ /* Hero */
+ .contact-hero {
+     background-image: url(/Images/Banner.jpg);
+     padding: 30px 6% 30px;
+ }
+
+ /* Main contact section */
+ .contact-section {
+     display: flex;
+     gap: 60px;
+     padding: 50px 5%;
+     background-color: #fff;
+ }
+
+ /* Image */
+ .contact-image {
+     flex: 1;
+ }
+
+ .contact-image img {
+     width: 100%;
+     height: 360px;
+     object-fit: cover;
+     border-radius: 4px;
+ }
+
+ /* Form */
+ .contact-form-wrapper {
+     flex: 1;
+     color: #000;
+ }
+
+ .contact-form-wrapper h2 {
+     font-size: 1.8rem;
+     margin-bottom: 20px;
+ }
+
+ .contact-form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .contact-form label {
+     font-size: 0.9rem;
+     margin-bottom: 15px;
+ }
+
+ .contact-form input {
+     width: 100%;
+     padding: 10px 12px;
+     margin-top: 6px;
+     border: 1px solid #999;
+     font-family: 'Arial', sans-serif;
+     font-size: 0.9rem;
+ }
+
+ .contact-form input:focus {
+     outline: none;
+     border-color: #000;
+ }
+
+ .contact-form button {
+     width: fit-content;
+     margin-top: 20px;
+     padding: 10px 24px;
+     background-color: #000;
+     color: #fff;
+     border: none;
+     font-size: 0.9rem;
+     cursor: pointer;
+ }
+
+ .contact-form button:hover {
+     opacity: 0.85;
+ }
+
+ /* ADDRESS + MAP */
+
+ .contact-info {
+     display: flex;
+     gap: 60px;
+     padding: 70px 8%;
+     background-color: #f5f5f5;
+ }
+
+ .address-box {
+     flex: 1;
+     color: #000;
+ }
+
+ .address-box h3 {
+     font-size: 1.4rem;
+     margin-bottom: 10px;
+ }
+
+ .address-box p {
+     font-size: 0.95rem;
+     line-height: 1.7;
+ }
+
+ /* Map */
+ .map-box {
+     flex: 1;
+ }
+
+ .map-box iframe {
+     width: 100%;
+     height: 280px;
+     border: 0;
+ }
+
+ /* MOBILE */
+
+ @media (max-width: 900px) {
+
+     .contact-section,
+     .contact-info {
+         flex-direction: column;
+         padding: 60px 8%;
+     }
+
+     .contact-image img {
+         height: 240px;
+     }
+ }
+
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+ }
+
+ .site-footer {
+     position: sticky;
+     bottom: 0;
+     line-height: 1.7;
+     background-color: #000;
+     color: white;
+ }
+
+ .main-container {
+     position: relative;
+     z-index: 1;
+     background-color: #fff;
+ }
+
+ /* Footer layout */
+ .footer-inner {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 40px;
+     padding: 60px 80px 20px;
+ }
+
+ .ul li {
+     list-style: none;
+ }
+
+ .footer-bottom {
+     margin-top: 40px;
+     text-align: center;
+     font-size: 13px;
+     color: #777;
+     border-top: 1px solid #222;
+     padding: 20px;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+     .footer-inner {
+         grid-template-columns: 1fr;
+         padding: 40px 25px;
+     }
+
+     .site-footer {
+         position: sticky;
+         bottom: 0;
+     }
+ }
+
+
+ /* ---------- RESPONSIVE ---------- */
+ @media (max-width: 768px) {
+     .nav-links {
+         display: none;
+     }
+
+     .menu-toggle {
+         display: block;
+     }
+
+     .features-container {
+         grid-template-columns: 1fr;
+     }
+
+     .hero h1 {
+         font-size: 2.5rem;
+     }
+ }
